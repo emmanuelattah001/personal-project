@@ -1,0 +1,627 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    box-sizing: border-box;
+}
+/* header section start here */
+/* nav bar */
+nav{
+    display: flex;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: -1px 3px 4px rgba(0, 0, 0, 0.3);
+    width: auto;
+    height: 10vh;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.open-menu,.close-menu {
+	position: absolute;
+	display: none;
+    border: 2px solid rgba(18, 40, 154, 0.65);
+    border-radius: 5px;
+    color: rgba(18, 40, 154, 0.65);
+    padding: 5px 5px;
+}
+
+
+.open-menu{
+	right: 20px;
+	transform: translateY(-18px);
+}
+.close-menu{
+	top: 20px;
+	right: 20px;
+}
+#check{
+	display: none;
+}
+
+.lists{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 20px;
+}
+.nav-bar{
+	display: flex;
+    margin-right: 20px;
+}
+nav li{
+	list-style: none;
+    text-transform: uppercase;
+}
+nav li a{
+	text-decoration: none;
+	color: gray;
+	text-align: center;
+	padding: 15px;
+}
+
+nav ul li a:hover{
+    color: red;
+    transition: 1s ease-out;
+}
+
+
+.logo{
+    font-size: 10px;
+    max-height: 5vh;
+    color: rgb(241, 11, 11);
+    margin-left: 20px;
+    text-shadow: -1px 2px 4px rgba(209, 31, 31, 0.5);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* nav bar ends here */
+
+/* hero section start here */
+
+.hero-section{
+    background-image: url(../image/me2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* image-resolution: 1280 * 1080px; */
+}
+
+
+
+.hero-section:before{
+    position:absolute;
+    content: "";
+    top: 6;
+    left:0;
+    background-color:rgba(21, 21, 22, 0.65);
+    width:100%;
+    height: 90vh;
+}
+
+.about-me{
+    position: relative;
+    top: 5em;
+    bottom: 0;
+    width: 100%;
+    height: 35vh;
+}
+
+
+
+.hero-section .intro{
+    line-height: 5rem;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.hero-section .occupation,
+.btn{
+    color: white;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hero-section .occupation p{
+    font-size: 1.5em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: capitalize;
+}
+
+.hero-section .btn button{
+    padding: 15px;
+    background-color: rgba(18, 40, 154, 0.65);
+    border-color: blanchedalmond;
+    width: 15rem;
+    height: auto;
+}
+
+.hero-section .btn button:hover{
+    background-color: transparent;
+    border-color: rgba(31,44,108, .65);
+    transition: 1.5s;
+    filter: drop-shadow(0 0 10px red);
+}
+
+.hero-section a{
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: larger;
+}
+
+/* hero section ends here */
+
+/* main section start here */
+
+/* the about section start here */
+
+.about-section{
+    /* text-align: center; */
+    margin: auto;
+    padding: 50px;
+    width: 100%;
+    height: auto;
+}
+
+.about-section h1{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 48px;
+}
+
+.about-section .about{
+    /* columns: 2;
+    column-gap: 200px; */
+    display: flex;
+    justify-content: space-between;
+    padding: auto;
+    margin: 40px;
+}
+
+.gmail{
+    text-transform: lowercase;
+}
+
+.about-section .icons{
+    background: rgba(31,44,108, .65);
+    margin-top: 0;
+}
+
+.about-section .image{
+    background-color: rgba(31,44,108, .65);
+    text-align: center;
+    height: max-content;
+}
+
+.attah img{
+    width: 100%;
+    height: 80vh;
+}
+
+.about-section .icons i{
+    color: white;
+    margin: 10px;
+}
+
+.about-section .icons i:hover{
+    color: #DDB79F;
+}
+
+.about-section .about .hubby{
+    width: 50%;
+    line-height: 1em;
+    text-transform: capitalize;
+    word-spacing: 4px;
+}
+
+.about-section .about .hubby h3{
+    margin: 40px 0;
+}
+
+.about-section .about .hubby p:nth-child(2){
+    margin: 30px 0;
+}
+
+.about-section .about .hubby p{
+    color: rgb(39, 35, 35);
+    margin: 20px 0;
+}
+
+.about-section .about .hubby .contact{
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+}
+
+/* Fade In Animation: Smoothly transitions the element from invisible to visible. Customize as needed. */
+@keyframes fadeIn {
+    0% { opacity: 0;
+        transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+/* about section ends here */
+
+/* experience section start here */
+.experience-section{
+    background-color: #F9FBFD;
+    text-transform: capitalize;
+}
+
+.experience-section .experience h1{
+    text-align: center;
+    padding: 30px;
+    font-size: 25px;
+}
+
+.experience-section .present{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.experience-section .present .detail{
+    margin: 5em ;
+    width: 50%;
+    height: auto;
+}
+
+.details{
+    width: 50%;
+}
+
+
+.experience-section .present p:nth-child(2){
+    line-height: 50px;
+}
+/* experience section ends here */
+
+.portfolios{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 50%;
+    background-color: white;
+}
+
+.portfolio{
+    text-align: center;
+    margin: 50px;
+    text-transform: capitalize;
+    font-size: 25px;
+}
+
+
+.portfolios .image img{
+    width: 100%;
+    height: 50vh;
+    filter: brightness(1);
+    overflow: hidden;
+}
+
+.portfolios .image img::before{
+    position:absolute;
+    content: "";
+    top: 0;
+    left:0;
+    background-color:rgba(31,44,108, .65);
+    width:100%;
+    height: 50vh;
+}
+
+/* Zoom In Animation: Scales the element up from a smaller size to its full size. Great for emphasis on new elements. */
+@keyframes zoomIn {
+    0% { transform: scale(0.5); }
+    100% { transform: scale(1); }
+}
+.zoom-in:hover{
+    animation: zoomIn 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+
+.portfolios .image{
+    background-color: white;
+    box-shadow: 1px 2px 3px black;
+    background-size: auto;
+    width: 20em;
+    height: fit-content;
+    margin: 20px 0;
+}
+
+
+/* Wobble Animation: Moves the element back and forth to create a wobbling effect, useful for drawing attention. */
+@keyframes wobble {
+    0% { transform: translateX(0); }
+    15% { transform: translateX(-25%) rotate(-5deg); }
+    30% { transform: translateX(20%) rotate(3deg); }
+    45% { transform: translateX(-15%) rotate(-3deg); }
+    60% { transform: translateX(10%) rotate(2deg); }
+    75% { transform: translateX(-5%) rotate(-1deg); }
+    100% { transform: translateX(0); }
+}
+    .wobble {
+    animation: wobble 1s;
+    overflow: hidden;
+}
+
+/* portfolio section ends here */
+
+/* footer section start here */
+.contact-section{
+    background-color: #F9FBFD;
+    text-transform: capitalize;
+    width: 100%;
+    height: 100vh;
+}
+
+.contact-me{
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper .form{
+    width: 50%;
+    height: 90vh;
+}
+
+.wrapper .emmy{
+    width: 30%;
+    height: 70vh;
+    padding: 20px;
+}
+
+.wrapper .form .name, .email, .subject, .message, .btn-primary{
+    padding: 20px ;
+    margin: 10px 0 10px 20px;
+    border: none;
+    text-transform: capitalize;
+}
+
+.wrapper .form .name, .email{
+    width: 35%;
+}
+
+.wrapper .subject{
+    width: 75%;
+}
+
+.wrapper .message{
+    width: 75%;
+    height: 20vh;
+    padding: 0;
+}
+
+.wrapper .btn-primary{
+    width: 75%;
+    background-color: rgba(31,44,108, .65);
+    font-size: 15px;
+}
+
+.phone i{
+    color: rgba(18, 40, 154, 0.65);
+    margin: 5px;
+}
+
+.phone i:hover{
+    border: 3px solid rgba(18, 40, 154, 0.65);
+    padding: 5px;
+    border-radius: 10px;
+    transform: translateY(-18px);
+    filter: drop-shadow(1 2 10px);
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+
+@media screen and (max-width:768px) {
+    body{
+        font-size: 16px;
+    }
+
+    span.nav-bar{
+		flex-direction:column;
+		width: 50%;
+		height: fit-content;
+		position: fixed;
+		top: 0;
+		right: -100%;
+        z-index: 100;
+		background: #fff;
+		transition: all 1s ease-in-out;
+	}
+	.nav-bar li{
+		margin-top: 40px;
+	}
+	.nav-bar li a {
+		padding: 5px;
+	}
+	.open-menu,.close-menu{
+		display: block;
+	}
+	#check:checked ~.nav-bar{right: 0}
+	nav{
+		display : flex;
+		justify-content: space-between;
+	}
+    /* nav ends here */
+
+    .hero-section{
+        background-image: url(../image/me2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        max-width: 100%;
+        max-height: 50%;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-section .intro{
+        line-height: 4rem;
+        font-size: 30px;
+        text-align: center;
+        color: white;
+        text-transform: capitalize;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .hero-section .occupation p{
+        font-size: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-transform: capitalize;
+    }
+
+    .hero-section .btn button{
+        padding: 10px;
+        background-color: rgba(18, 40, 154, 0.65);
+        border-color: blanchedalmond;
+        width: 10rem;
+        height: auto;
+    }
+
+    .hero-section .btn button:hover{
+        background-color: transparent;
+        border-color: rgba(31,44,108, .65);
+        transition: 1.5s;
+    }
+    /* hero section ends here */
+    /* about section start here */
+
+    .about-section{
+        margin: auto;
+        padding: 0%;
+        width: 100%;
+        height: auto;
+    }
+
+    .about-section .about{
+        display: block;
+        padding: auto;
+    }
+
+    .about-section .about .hubby{
+        width: 100%;
+        line-height: 2em;
+        text-transform: capitalize;
+        word-spacing: 5px;
+    }
+
+    .attah img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .about-section .about .hubby .contact{
+        display: contents;
+        justify-content: space-between;
+        margin: 25px 0;
+    }
+
+
+    /* about section ends here */
+
+    .experience-section .present{
+        display: contents;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        /* gap: 50px; */
+    }
+
+    .experience-section .present .detail{
+        margin-bottom: 3em ;
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    /* portfolio section */
+
+    .portfolios{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        margin: 20px 0;
+        width: 100%;
+        height: 50%;
+        background-color: white;
+    }
+
+    /* portfolio ends here */
+    /* contact section start here */
+    .contact-section{
+        background-color: #F9FBFD;
+        text-transform: capitalize;
+        width: 100%;
+        height: 100%;
+    }
+    .wrapper{
+        display: contents;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .wrapper .form{
+        width: 100%;
+        height: 90vh;
+    }
+
+    .wrapper .form .name, .email, .subject, .message, .btn-primary{
+        padding: 20px ;
+        margin: 15px 0 15px 20px;
+        border: none;
+        text-transform: capitalize;
+        width: 75%;
+    }
+
+    .phone i{
+        color: rgba(18, 40, 154, 0.65);
+    }
+
+    .phone i:hover{
+        border: 3px solid rgba(18, 40, 154, 0.65);
+        padding: 5px;
+        border-radius: 10px;
+        transform: translateY(-18px);
+        filter: drop-shadow(1 2 10px);
+    }
+
+}
