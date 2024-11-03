@@ -227,7 +227,7 @@ nav ul li a:hover{
 
 .about-section .about .hubby{
     width: 50%;
-    line-height: 1em;
+    line-height: 4vh;
     text-transform: capitalize;
     word-spacing: 4px;
 }
@@ -321,7 +321,7 @@ nav ul li a:hover{
     overflow: hidden;
 }
 
-.portfolios .image img::before{
+/* .portfolios .image img::before{
     position:absolute;
     content: "";
     top: 0;
@@ -329,7 +329,7 @@ nav ul li a:hover{
     background-color:rgba(31,44,108, .65);
     width:100%;
     height: 50vh;
-}
+} */
 
 /* Zoom In Animation: Scales the element up from a smaller size to its full size. Great for emphasis on new elements. */
 @keyframes zoomIn {
@@ -446,10 +446,218 @@ nav ul li a:hover{
     display: flex;
     justify-content: center;
     padding: 10px;
+    font-size: medium;
 }
 
 
 @media screen and (max-width:768px) {
+    body{
+        font-size: 18px;
+    }
+
+    span.nav-bar{
+		flex-direction:column;
+		width: 50%;
+		height: fit-content;
+		position: fixed;
+		top: 0;
+		right: -100%;
+        z-index: 100;
+		background: #fff;
+		transition: all 1s ease-in-out;
+	}
+	.nav-bar li{
+		margin-top: 40px;
+	}
+	.nav-bar li a {
+		padding: 5px;
+	}
+	.open-menu,.close-menu{
+		display: block;
+	}
+	#check:checked ~.nav-bar{right: 0}
+	nav{
+		display : flex;
+		justify-content: space-between;
+	}
+    /* nav ends here */
+
+    .hero-section{
+        background-image: url(../image/me2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        max-width: 100%;
+        max-height: 50%;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-section .intro{
+        line-height: 4rem;
+        font-size: 30px;
+        text-align: center;
+        color: white;
+        text-transform: capitalize;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .hero-section .occupation p{
+        font-size: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-transform: capitalize;
+    }
+
+    .hero-section .btn button{
+        padding: 10px;
+        background-color: rgba(18, 40, 154, 0.65);
+        border-color: blanchedalmond;
+        width: 10rem;
+        height: auto;
+    }
+
+    .hero-section .btn button:hover{
+        background-color: transparent;
+        border-color: rgba(31,44,108, .65);
+        transition: 1.5s;
+    }
+    /* hero section ends here */
+    /* about section start here */
+
+    .about-section{
+        margin: auto;
+        padding: 0%;
+        width: 100%;
+        height: auto;
+    }
+
+    .about-section .about{
+        display: block;
+        padding: auto;
+    }
+
+    .about-section .about .hubby{
+        width: 100%;
+        line-height: 5vh;
+        text-transform: capitalize;
+        word-spacing: 5px;
+    }
+
+    .attah img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .about-section .about .hubby .contact{
+        display: contents;
+        justify-content: space-between;
+        margin: 25px 0;
+    }
+
+
+    /* about section ends here */
+
+    .experience-section .present{
+        display: contents;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        /* gap: 50px; */
+    }
+
+    .experience-section .present .detail{
+        margin-bottom: 3em ;
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    /* portfolio section */
+
+    .portfolios{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        margin: 20px 0;
+        width: 100%;
+        height: 90%;
+        background-color: white;
+    }
+
+    .portfolios .image img{
+        width: 90%;
+        height: 50vh;
+        filter: brightness(1);
+        overflow: hidden;
+    }
+
+    .portfolios .image{
+        width: 100%;
+        height: auto;
+    }
+    
+
+    #portfolio-container{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* portfolio ends here */
+    /* contact section start here */
+    .contact-section{
+        background-color: #F9FBFD;
+        text-transform: capitalize;
+        width: 100%;
+        height: 100%;
+    }
+    .wrapper{
+        display: contents;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .wrapper .emmy{
+        width: 30%;
+        height: 70vh;
+        padding: 20px;
+    }
+
+    .wrapper .form{
+        width: 100%;
+        height: 90vh;
+    }
+
+    .wrapper .form .name, .email, .subject, .message, .btn-primary{
+        padding: 20px ;
+        margin: 15px 0 15px 20px;
+        border: none;
+        text-transform: capitalize;
+        width: 75%;
+    }
+
+    .phone i{
+        color: rgba(18, 40, 154, 0.65);
+        margin: 2px;
+    }
+
+    .phone i:hover{
+        border: 1px solid rgba(18, 40, 154, 0.65);
+    }
+
+    .copyright{
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (max-width:326px) {
     body{
         font-size: 16px;
     }
@@ -538,7 +746,7 @@ nav ul li a:hover{
 
     .about-section .about .hubby{
         width: 100%;
-        line-height: 2em;
+        line-height: 5vh;
         text-transform: capitalize;
         word-spacing: 5px;
     }
@@ -581,10 +789,29 @@ nav ul li a:hover{
         align-content: center;
         margin: 20px 0;
         width: 100%;
-        height: 50%;
+        height: 90%;
         background-color: white;
     }
 
+    .portfolios .image img{
+        width: 90%;
+        height: 50vh;
+        filter: brightness(1);
+        overflow: hidden;
+    }
+
+    .portfolios .image{
+        width: 100%;
+        height: auto;
+    }
+
+
+    #portfolio-container{
+        display: flex;
+        justify-content: center;
+        width: auto;
+        height: 100%;
+    }
     /* portfolio ends here */
     /* contact section start here */
     .contact-section{
@@ -597,6 +824,12 @@ nav ul li a:hover{
         display: contents;
         width: 100%;
         height: 100vh;
+    }
+
+    .wrapper .emmy{
+        width: 30%;
+        height: 70vh;
+        padding: 20px;
     }
 
     .wrapper .form{
@@ -623,5 +856,4 @@ nav ul li a:hover{
         transform: translateY(-18px);
         filter: drop-shadow(1 2 10px);
     }
-
 }
